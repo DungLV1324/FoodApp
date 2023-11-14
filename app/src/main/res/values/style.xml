@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.fode.button.primary"
+        parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="cornerRadius">90dp</item>
+        <item name="android:layout_height">74dp</item>
+        <item name="android:layout_width">384dp</item>
+        <item name="backgroundTint">#FF5722</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+</resources>

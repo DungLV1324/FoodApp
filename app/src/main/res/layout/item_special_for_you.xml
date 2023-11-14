@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_avatar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="27dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/custom_ripple_rectangle"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintDimensionRatio="333:167"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/im_avatar"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E2E2E2" />
+
+            <ImageView
+                android:id="@+id/im_bk_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_like_bt"
+                />
+            <ImageView
+                android:id="@+id/im_heart"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_heart"
+                android:layout_gravity="end"
+              />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/sale_off_30"
+            android:fontFamily="@font/medium"
+            android:textColor="#232323"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/cv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/cv_avatar" />
+
+
+        <TextView
+            android:id="@+id/tv_gia_old"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:minLines="2"
+            android:text="@string/_7_90"
+            android:fontFamily="@font/medium"
+            android:textColor="#AFAFAF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sale"
+            app:layout_constraintLeft_toRightOf="@id/tv_sale"
+            app:layout_constraintRight_toLeftOf="@id/tv_gia_new"
+            app:layout_constraintTop_toTopOf="@id/tv_sale" />
+
+        <TextView
+            android:id="@+id/tv_gia_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minLines="2"
+            android:text="@string/_7_90"
+            android:fontFamily="@font/medium"
+            android:textColor="#232323"            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sale"
+            app:layout_constraintLeft_toRightOf="@id/tv_gia_old"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_sale" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

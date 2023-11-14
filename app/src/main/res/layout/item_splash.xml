@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+
+        <TextView
+            android:id="@+id/tv_above"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/medium"
+            android:paddingHorizontal="40dp"
+            android:paddingBottom="20dp"
+            android:text="@string/certified_chef"
+            android:textColor="#232323"
+
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_below"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingHorizontal="10dp"
+            android:text="@string/cook_food_like_your_personel_cheft"
+            android:textColor="#AFAFAF"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_above"
+            app:layout_constraintRight_toRightOf="@id/tv_above"
+            app:layout_constraintTop_toBottomOf="@id/tv_above" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

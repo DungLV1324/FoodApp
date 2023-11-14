@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_login">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.dunglv.foodapp.ui.homemain.HomeMainFragment"
+        android:label="HomeMainFragment"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.dunglv.foodapp.ui.homemain.home.HomeFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.dunglv.foodapp.ui.homemain.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/fragment_singup"
+        android:name="com.dunglv.foodapp.ui.homemain.registration.RegistrationFragment"
+        android:label="RegistrationFragment"
+        tools:layout="@layout/fragment_singup" />
+    <fragment
+        android:id="@+id/fragment_populer"
+        android:name="com.dunglv.foodapp.ui.homemain.home.allfood.PopulerFragment"
+        android:label="PopulerFragment"
+        tools:layout="@layout/fragment_populer" />
+    <fragment
+        android:id="@+id/fragment_pizza"
+        android:name="com.dunglv.foodapp.ui.homemain.home.allfood.PizzaFragment"
+        android:label="PizzaFragment"
+        tools:layout="@layout/fragment_pizza" />
+    <fragment
+        android:id="@+id/fragment_top"
+        android:name="com.dunglv.foodapp.ui.homemain.home.allfood.TopFragment"
+        android:label="TopFragment"
+        tools:layout="@layout/fragment_top" />
+    <fragment
+        android:id="@+id/fragment_allmenu"
+        android:name="com.dunglv.foodapp.ui.homemain.home.allfood.AllMenuFragment"
+        android:label="AllMenuFragment"
+        tools:layout="@layout/fragment_allmenu" />
+    <fragment
+        android:id="@+id/fragment_food"
+        android:name="com.dunglv.foodapp.ui.homemain.home.allfood.FoodFragment"
+        android:label="FoodFragment"
+        tools:layout="@layout/fragment_food" />
+    <fragment
+        android:id="@+id/fragment_food_detail"
+        android:name="com.dunglv.foodapp.ui.homemain.detailfood.DetailFoodFragment"
+        android:label="FoodFragment"
+        tools:layout="@layout/fragment_food_detail" />
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.dunglv.foodapp.ui.homemain.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+ <fragment
+        android:id="@+id/fragment_bell"
+        android:name="com.dunglv.foodapp.ui.homemain.bell.BellFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_bell" />
+
+ <fragment
+        android:id="@+id/fragment_my_profile"
+        android:name="com.dunglv.foodapp.ui.homemain.user.UserFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_my_profile" />
+
+
+</navigation>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/custom_ripple_rectangle"
+        android:background="#F9FAFC">
+
+        <TextView
+            android:id="@+id/tv_calo"
+            android:layout_width="0dp"
+            android:textColor="#232323"
+            android:fontFamily="@font/medium"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:text="@string/_78_calories"
+            android:textSize="12sp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintLeft_toLeftOf="@id/cv_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableLeftCompat="@drawable/ic_kcal" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="40dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp"
+            android:src="@drawable/image"
+            app:layout_constraintDimensionRatio="1.2:1"
+            app:layout_constraintTop_toBottomOf="@id/tv_calo" />
+        <ImageView
+            android:id="@+id/im_bk_heart"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/custom_ripple_rectangle"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_like_bt"
+            app:layout_constraintBottom_toBottomOf="@id/tv_calo"
+            app:layout_constraintRight_toRightOf="@id/cv_avatar"
+            app:layout_constraintTop_toTopOf="@id/tv_calo" />
+
+        <ImageView
+            android:id="@+id/im_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintBottom_toBottomOf="@+id/im_bk_heart"
+            app:layout_constraintLeft_toLeftOf="@id/im_bk_heart"
+            app:layout_constraintRight_toRightOf="@id/im_bk_heart"
+            app:layout_constraintTop_toTopOf="@id/im_bk_heart" />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/clasico"
+            android:textColor="#232323"
+            android:fontFamily="@font/medium"            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/cv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/cv_avatar" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:minLines="2"
+            android:text="@string/mixed_pizza_with_cheese"
+            android:textColor="#AFAFAF"
+            android:textSize="18sp"
+            android:fontFamily="@font/medium"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_gia_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minLines="2"
+            android:text="@string/_7_90"
+            android:textColor="#232323"
+            android:fontFamily="@font/medium"            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <ImageView
+            android:id="@+id/im_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/custom_ripple_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_next1"
+            app:layout_constraintRight_toRightOf="@id/cv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/tv_gia_new" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

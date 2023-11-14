@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/dotsIndicator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:id="@+id/v_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_backgroud"
+            app:layout_constraintDimensionRatio="4:4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="40dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp"
+            android:src="@drawable/image"
+            app:layout_constraintDimensionRatio="1.2:1"
+            app:layout_constraintBottom_toBottomOf="@id/v_background" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            app:civ_border_color="#FFFFFF"
+            android:scaleType="center"
+            android:background="@drawable/ic_ellipse"
+            android:padding="5dp"
+            app:civ_border_width="3dp"
+            android:src="@drawable/ic_dua_w"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_1"
+            app:layout_constraintRight_toRightOf="@id/cv_avatar"
+            app:layout_constraintTop_toTopOf="@id/guideline_1" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dotsIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            app:dotsColor="#D3D3D3"
+            app:dotsSize="10dp"
+            app:dotsSpacing="3dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="@id/view_pager_2"
+            app:layout_constraintRight_toRightOf="@id/view_pager_2"
+            app:layout_constraintTop_toBottomOf="@id/v_background"
+            app:selectedDotColor="#FFDA80" />
+
+        <ImageView
+            android:id="@+id/im_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/ic_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/custom_get"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/get_started"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
