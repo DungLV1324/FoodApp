@@ -49,5 +49,8 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding, MainViewModel>() {
         binding.imDiaChi.setOnClickListener {
             bottomSheetAddres.show(childFragmentManager, bottomSheetAddres.tag)
         }
+        binding.imSearch.setOnClickListener {
+            navigateFragment(R.id.fragment_map)
+        }
     }
 }

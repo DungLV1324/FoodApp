@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dunglv.foodapp.ui.homemain.bell.BellFragment
+import com.dunglv.foodapp.ui.homemain.map.MapFragment
 import com.dunglv.foodapp.ui.homemain.home.HomeFragment
 import com.dunglv.foodapp.ui.homemain.search.SearchFragment
 import com.dunglv.foodapp.ui.homemain.start.StartFragment
@@ -15,7 +15,7 @@ class ViewPagerBottonNavAdapter(fragmentManager: FragmentManager, lifecycle: Lif
 
     private val homeFragment: HomeFragment by lazy { HomeFragment() }
     private val searchFragment: SearchFragment by lazy { SearchFragment() }
-    private val bellFragment: BellFragment by lazy { BellFragment() }
+    private val bellFragment: MapFragment by lazy { MapFragment() }
     private val startFragment: StartFragment by lazy { StartFragment() }
     private val userFragment: UserFragment by lazy { UserFragment() }
 

@@ -1,6 +1,5 @@
 package com.dunglv.foodapp.ui.homemain.login
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -9,7 +8,6 @@ import android.widget.Toast
 import com.dunglv.foodapp.R
 import com.dunglv.foodapp.api.LoginApi
 import com.dunglv.foodapp.api.RestClient
-import com.dunglv.foodapp.common.Constant
 import com.dunglv.foodapp.data.model.LoginResponse
 import com.dunglv.foodapp.databinding.FragmentLoginBinding
 import com.dunglv.foodapp.ui.base.BaseBindingFragment
@@ -45,6 +43,10 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding, MainViewModel>()
         binding.tvTitleSingUp.setOnClickListener {
             navigateFragment(R.id.fragment_singup)
         }
+        binding.tvFacebook.setOnClickListener {
+            navigateFragment(R.id.fragment_map)
+
+        }
     }
 
     private fun callBackApiLogin() {
@@ -54,20 +56,17 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding, MainViewModel>()
                 binding.edUserName.text.toString(),
                 binding.edPassWord.text.toString()
             )
+            Timber.tag("TAG").e("onResponse : %s" + 1)
+
             call.enqueue(object : Callback<LoginResponse> {
-                @SuppressLint("SuspiciousIndentation", "BinaryOperationInTimber")
                 override fun onResponse(
                     call: Call<LoginResponse>?, response: Response<LoginResponse>?
                 ) {
-//                    Timber.tag("TAG").e("onResponse: %s", response?.body()?.message)
+                    Timber.tag("TAG").e("onResponse: %s", response?.body()?.message)
 
                     if (response?.body()?.status == true) {
                         saveToken(response.body()?.data?.token)
-                        Timber.tag("TAG").e("onResponse: " + response.body()?.data?.token)
-
-//                        Bundle().apply {
-//                            putString(Constant.KEY_TOKEN, response.body()?.data?.token)
-                            navigateFragment(R.id.fragment_main)
+                        navigateFragment(R.id.fragment_main)
 //                        }
                     } else {
                         Toast.makeText(

@@ -127,7 +127,6 @@ class MainViewModel : BaseViewModel() {
     fun initDataTop(context: Context) {
         val token = getTokenFromSharedPreferences(context)
         val call = endPointAPI.getAllProducts("Bearer " + token)
-
         call.enqueue(object : Callback<HomeResponse> {
             override fun onResponse(
                 call: Call<HomeResponse>?,
@@ -144,7 +143,6 @@ class MainViewModel : BaseViewModel() {
                     ).show()
                 }
             }
-
             override fun onFailure(call: Call<HomeResponse>?, t: Throwable?) {
                 t?.printStackTrace()
             }
@@ -154,7 +152,6 @@ class MainViewModel : BaseViewModel() {
     fun initDataFood(context: Context) {
         val token = getTokenFromSharedPreferences(context)
         val call = endPointAPI.getAllProducts("Bearer " + token)
-
         call.enqueue(object : Callback<HomeResponse> {
             override fun onResponse(
                 call: Call<HomeResponse>?,

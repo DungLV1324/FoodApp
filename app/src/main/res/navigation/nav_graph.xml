@@ -64,7 +64,7 @@
  <fragment
         android:id="@+id/fragment_bell"
         android:name="com.dunglv.foodapp.ui.homemain.bell.BellFragment"
-        android:label="SearchFragment"
+        android:label="BellFragment"
         tools:layout="@layout/fragment_bell" />
 
  <fragment
@@ -72,6 +72,11 @@
         android:name="com.dunglv.foodapp.ui.homemain.user.UserFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_my_profile" />
+ <fragment
+        android:id="@+id/fragment_map"
+        android:name="com.dunglv.foodapp.ui.homemain.map.MapFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_map" />
 
 
 </navigation>

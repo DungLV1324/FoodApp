@@ -1,8 +1,7 @@
-import org.jetbrains.kotlin.fir.declarations.builder.buildScript
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin") version "2.0.1"
 }
 
 android {
@@ -40,11 +39,11 @@ android {
         jvmTarget = "1.8"
     }
 }
-//buildscript {
-//    repositories {
-//        maven {url= uri ( "https://jitpack.io") }
-//    }
-//}
+buildscript {
+    dependencies {
+        classpath ("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
+    }
+}
 
 dependencies {
 
@@ -64,10 +63,12 @@ dependencies {
     //botton nav
 //    implementation ("com.gauravk.bubblenavigation:bubblenavigation:1.0.7")
 
+    implementation ("com.google.android.gms:play-services-maps:18.2.0")
     implementation("androidx.navigation:navigation-ui-ktx:$2.4.0")
     implementation("com.google.android.material:material:1.10.0")
     implementation ("com.github.bumptech.glide:glide:4.13.0")
-
+//location
+    implementation ("com.google.android.gms:play-services-location:18.0.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.4")
     testImplementation("junit:junit:4.13.2")
