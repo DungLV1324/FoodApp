@@ -12,11 +12,11 @@ class ViewMenuHome : FrameLayout {
 
     private var binding: ViewMenuHomeBinding =
         ViewMenuHomeBinding.inflate(LayoutInflater.from(context), this, true)
-    private var textBottom: String = ""
-        set(value) {
-            field = value
-            binding.tvName.text = value
-        }
+//    private var textBottom: String = ""
+//        set(value) {
+//            field = value
+//            binding.tvName.text = value
+//        }
 
 //    private fun setView(image: Int, background: Int) {
 //        binding.vBackground.setBackgroundResource(background)
@@ -28,7 +28,7 @@ class ViewMenuHome : FrameLayout {
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         val typeArray: TypedArray =
             context.theme.obtainStyledAttributes(attrs, R.styleable.ViewMenuHome, 0, 0)
-        textBottom = typeArray.getString(R.styleable.ViewMenuHome_textBottom).toString()
+//        textBottom = typeArray.getString(R.styleable.ViewMenuHome_textBottom).toString()
     }
 
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(

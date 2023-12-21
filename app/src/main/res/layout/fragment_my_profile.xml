@@ -207,7 +207,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_address" />
 
         <TextView
-            android:id="@+id/tv_login_app"
+            android:id="@+id/tv_logout_app"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

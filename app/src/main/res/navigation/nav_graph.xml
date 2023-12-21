@@ -77,6 +77,11 @@
         android:name="com.dunglv.foodapp.ui.homemain.map.MapFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_map" />
+ <fragment
+        android:id="@+id/fragment_research"
+        android:name="com.dunglv.foodapp.ui.homemain.home.search.ReSearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_research" />
 
 
 </navigation>

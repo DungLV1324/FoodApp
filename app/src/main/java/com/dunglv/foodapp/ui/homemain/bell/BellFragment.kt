@@ -31,7 +31,8 @@ class BellFragment : BaseBindingFragment<FragmentBellBinding, MainViewModel>() {
     }
 
     private fun initData() {
-        mainViewModel.listPopulerLiveData.observe(viewLifecycleOwner) {
+        mainViewModel.initDataBell(requireContext())
+        mainViewModel.listBellLiveData.observe(viewLifecycleOwner) {
             bellAdapter.submitList(it)
         }
 

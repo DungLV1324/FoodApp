@@ -20,11 +20,13 @@ class HomeMainFragment : BaseBindingFragment<FragmentMainBinding, MainViewModel>
 
     override fun onCreatedView(view: View?, savedInstanceState: Bundle?) {
         setAdapter()
+
     }
+
+
 
     private fun setAdapter() {
         ViewPagerBottonNavAdapter(childFragmentManager, lifecycle).apply {
-
 
             binding.viewPager2.adapter = this
             binding.viewPager2.offscreenPageLimit =5

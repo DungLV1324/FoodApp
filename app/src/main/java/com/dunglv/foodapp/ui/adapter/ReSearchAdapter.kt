@@ -5,10 +5,12 @@ import androidx.recyclerview.widget.DiffUtil
 import com.bumptech.glide.Glide
 import com.dunglv.foodapp.R
 import com.dunglv.foodapp.data.model.DataProducts
+import com.dunglv.foodapp.databinding.ItemFoodBinding
 import com.dunglv.foodapp.databinding.ItemFullFoodBinding
+import com.dunglv.foodapp.databinding.ItemSearchBinding
 import com.dunglv.foodapp.ui.base.BaseBindingAdapter
 
-class HomeAdapter : BaseBindingAdapter<DataProducts, ItemFullFoodBinding>(
+class ReSearchAdapter : BaseBindingAdapter<DataProducts, ItemFullFoodBinding>(
     object : DiffUtil.ItemCallback<DataProducts>() {
         override fun areItemsTheSame(oldItem: DataProducts, newItem: DataProducts) =
             oldItem.id == newItem.id
@@ -30,8 +32,8 @@ class HomeAdapter : BaseBindingAdapter<DataProducts, ItemFullFoodBinding>(
                     Glide.with(context).load(image_url).into(cvAvatar)
                     tvCalo.text = calories.toString()
                     tvName.text = name
-                    tvTitle.text = description
-                    tvGiaNew.text = (price* 0.1f).toString()
+                    tvTitle.text = category
+                    tvGiaNew.text = price.toString()
                 }
             }
             holder.itemView.setOnClickListener {

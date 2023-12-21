@@ -92,11 +92,10 @@ class MainViewModel : BaseViewModel() {
     }
 
 
-    private fun getTokenFromSharedPreferences(context: Context): String? {
+      fun getTokenFromSharedPreferences(context: Context): String? {
         val sharedPreferences = context.getSharedPreferences("myapp", Context.MODE_PRIVATE)
         return sharedPreferences.getString("token", null)
     }
-
     fun initDataPopuler(context: Context) {
         val token = getTokenFromSharedPreferences(context)
         val call = endPointAPI.getAllProducts("Bearer " + token)

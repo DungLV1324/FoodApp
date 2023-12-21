@@ -30,6 +30,8 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding, MainViewModel>() {
     override fun onCreatedView(view: View?, savedInstanceState: Bundle?) {
         ViewPagerAdapter(childFragmentManager, lifecycle).apply {
             binding.viewPager2.adapter = this
+            binding.viewPager2.offscreenPageLimit=5
+            binding.viewPager2.isUserInputEnabled=false
             TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
                 tab.text = getString(
                     when (position) {
@@ -50,7 +52,7 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding, MainViewModel>() {
             bottomSheetAddres.show(childFragmentManager, bottomSheetAddres.tag)
         }
         binding.imSearch.setOnClickListener {
-            navigateFragment(R.id.fragment_map)
+            navigateFragment(R.id.fragment_research)
         }
     }
 }

@@ -38,6 +38,8 @@ class PopulerFragment : BaseBindingFragment<FragmentPopulerBinding, MainViewMode
         initData()
     }
 
+
+
     private fun initData() {
         mainViewModel.initDataPopuler(requireContext())
         mainViewModel.listPopulerLiveData.observe(viewLifecycleOwner) {

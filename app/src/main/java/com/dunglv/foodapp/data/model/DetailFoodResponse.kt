@@ -4,7 +4,6 @@ open class  DetailFoodResponse (
     var status: Boolean,
     var message :String,
     var data: DataDetail
-
 )
 open class DataDetail(
     val product: Products

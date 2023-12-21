@@ -52,23 +52,26 @@ dependencies {
     //dots-indicator
     implementation("com.tbuonomo:dotsindicator:4.3")
     //add circleimageview
-    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
     //add nav
     implementation("androidx.navigation:navigation-fragment-ktx:$2.4.0")
     //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.1.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.1.0")
+    implementation("com.squareup.retrofit2:retrofit:2.1.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.1.0")
     //timber
-    implementation ("com.jakewharton.timber:timber:5.0.1")
+    implementation("com.jakewharton.timber:timber:5.0.1")
     //botton nav
 //    implementation ("com.gauravk.bubblenavigation:bubblenavigation:1.0.7")
+    implementation("com.squareup.okhttp3:okhttp:3.2.0")
+//sdp
+    implementation("com.intuit.sdp:sdp-android:1.0.6")
 
-    implementation ("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("androidx.navigation:navigation-ui-ktx:$2.4.0")
     implementation("com.google.android.material:material:1.10.0")
-    implementation ("com.github.bumptech.glide:glide:4.13.0")
+    implementation("com.github.bumptech.glide:glide:4.13.0")
 //location
-    implementation ("com.google.android.gms:play-services-location:18.0.0")
+    implementation("com.google.android.gms:play-services-location:18.0.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.4")
     testImplementation("junit:junit:4.13.2")

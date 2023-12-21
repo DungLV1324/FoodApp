@@ -9,7 +9,9 @@ import com.dunglv.foodapp.R
 import com.dunglv.foodapp.databinding.ActivityIntroBinding
 import com.dunglv.foodapp.ui.adapter.IntroAdapter
 import com.dunglv.foodapp.ui.base.BaseBindingActivity
+import com.dunglv.foodapp.ui.homemain.HomeMainFragment
 import com.dunglv.foodapp.ui.homemain.MainViewModel
+import timber.log.Timber
 
 class IntroActivity : BaseBindingActivity<ActivityIntroBinding, MainViewModel>() {
 
@@ -55,6 +57,7 @@ class IntroActivity : BaseBindingActivity<ActivityIntroBinding, MainViewModel>()
     }
 
     private fun onClick() {
+
         binding.imNext.setOnClickListener {
             viewModel.listIntroLiveData.value?.size?.let { size ->
                 with(binding.viewPager2.currentItem) {
@@ -64,6 +67,7 @@ class IntroActivity : BaseBindingActivity<ActivityIntroBinding, MainViewModel>()
                 }
             }
         }
+
         binding.tvGet.setOnClickListener {
             viewModel.listIntroLiveData.value?.size?.let { size ->
                 with(binding.viewPager2.currentItem) {
@@ -77,15 +81,21 @@ class IntroActivity : BaseBindingActivity<ActivityIntroBinding, MainViewModel>()
     }
 
     private fun initData() {
-        viewModel.getIntro(this)
-        viewModel.listIntroLiveData.observe(this) {
-            introAdapter.submitList(it)
+        if (viewModel.getTokenFromSharedPreferences(this) != null) {
+            Timber.e("dunglv: " + viewModel.getTokenFromSharedPreferences(this))
+            val intent = Intent(this@IntroActivity, MainActivity::class.java)
+            startActivity(intent)
+        } else {
+            viewModel.getIntro(this)
+            viewModel.listIntroLiveData.observe(this) {
+                introAdapter.submitList(it)
+            }
         }
     }
 
+
     override fun getViewModel(): Class<MainViewModel> {
         return MainViewModel::class.java
-
     }
 
 }

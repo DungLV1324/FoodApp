@@ -1,6 +1,7 @@
 package com.dunglv.foodapp.ui.splash
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.dunglv.foodapp.R
 import com.dunglv.foodapp.databinding.ActivitySplashBinding
+import com.dunglv.foodapp.ui.homemain.HomeMainFragment
 import com.dunglv.foodapp.ui.homemain.intro.IntroActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -26,8 +28,6 @@ class SplashActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
         startToMain()
         makeStatusBarLight(this, Color.parseColor("#99858585"))
-
-
     }
 
     private fun makeStatusBarLight(activity: Activity, color: Int) {
@@ -38,9 +38,7 @@ class SplashActivity : AppCompatActivity() {
         activity.window.decorView.systemUiVisibility = (
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 )
-
     }
-
 
     override fun onDestroy() {
         super.onDestroy()
@@ -52,15 +50,12 @@ class SplashActivity : AppCompatActivity() {
         handle?.removeCallbacksAndMessages(null)
         handle = Handler(Looper.getMainLooper())
         runable = Runnable {
-            val intent = Intent(this, IntroActivity::class.java)
-            startActivity(intent)
-            finish()
+                val intent = Intent(this, IntroActivity::class.java)
+                startActivity(intent)
+                finish()
         }
-
         runable?.let {
             handle?.postDelayed(it, 3000)
         }
-
     }
-
 }
